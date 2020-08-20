@@ -1,4 +1,4 @@
-<img alt="GoStack" src="https://storage.googleapis.com/golden-wind/bootcamp-gostack/header-desafios.png" />
+<img alt="GoStack" src=".github/banner.jpeg" />
 
 <p align="center">
 
@@ -28,103 +28,105 @@
 
 </p>
 <h2 align="center">
-  Desafio 05: Primeiro projeto Node.js
+  Desafio Backend Calindra Tech
 </h2>
 
 ## 🚀 Sobre o desafio
 
-Nesse desafio, foi criado uma aplicação para treinar o que aprendi até agora no Node.js junto ao TypeScript, utilizando o conceito de models, repositories e services!
-
-Essa será uma aplicação para armazenar transações financeiras de entrada e saída, que deve permitir o cadastro e a listagem dessas transações.
+A ideia do desafio é simples, entender como você pensa na hora de abordar os
+problemas. Nas linguagens e tecnologias que se sentir mais confortável.
 
 <p align="center">
 
-  <img  alt="Test" title="Test" src=".github/teste.png"  />
+  <img  alt="Test" title="Test" src=".github/test.png"  />
 </p>
 
 ## 🔨 Tecnologias:
 
 - [NodeJs][nodejs]
 - [Express][express]
-- [uuidv4][uuidv4]
+- [TypeScript](https://www.typescriptlang.org/)
+- [Axios](https://github.com/axios/axios)
+- [ts-node-dev](https://www.npmjs.com/package/ts-node-dev)
+- [Eslint](https://eslint.org/)
+- [Prettier]()
 
 ## 🚀 Como rodar este projeto
 
 Para clonar e executar este aplicativo, você precisará de [Git](https://git-scm.com), [NodeJs][nodejs] Instalado em seu computador.
 
+Para que possamos fazer requisições existe uma chave da API de Geocoding do Google que pode ser obtida por meio de uma conta teste, você pode obter a sua usando as seguintes instruções:
+
+> Para obter uma chave de API: Visite o [Google Cloud Platform Console](https://console.cloud.google.com/).
+
+    Clique no menu suspenso do projeto e selecione ou crie o projeto ao qual deseja adicionar uma chave de API.
+    Clique no botão de menu e selecione APIs e serviços> Credenciais.
+    Na página Credenciais, clique em Criar credenciais> Chave da API.
+    O diálogo de chave de API criada exibe sua chave de API recém-criada. Clique em Fechar.
+    A nova chave da API está listada na página Credenciais, em Chaves da API.
+
+Coloque sua chave em um arquivo _.env_ ou _.*env.example*_ contido nesse repositório.
+
 ### 🌀 Clonando o repositório
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/Alquipo/GoStack12-desafio-05
+$ git clone https://github.com/Alquipo/Desafio-Calindra-BackEnd
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd GoStack12-desafio-05
+$ cd Desafio-Calindra-BackEnd
 ```
 
 ### 🎲 Rodando a API
 
 ```bash
 # Instale as dependências
-$ yarn
+$ npm install
 
 # Execute a Aplicação
-$ yarn dev:server
+$ npm run dev:server
 
-# Execute o teste da Aplicação
-$ yarn test
 
 # O servidor inciará na porta:3333 - acesse http://localhost:3333
 ```
 
 ## 🔑 Rotas da aplicação
 
-- **`POST /transactions`**: A rota deve receber `title`, `value` e `type` dentro do corpo da requisição, sendo `type` o tipo da transação, que deve ser `income` para entradas (depósitos) e `outcome` para saídas (retiradas). Ao cadastrar uma nova transação, ela deve ser armazenada dentro de um objeto com o seguinte formato :
+- **`GET /coordinates/:address`**: Essa rota retorna os dados dos endereços inseridos e também a distancia mais proxima e a mais distantes
 
 ```json
 {
-  "id": "uuid",
-  "title": "Salário",
-  "value": 3000,
-  "type": "income"
-}
-```
-
-- **`GET /transactions`**: Essa rota deve retornar uma listagem com todas as transações que você cadastrou até agora, junto com o valor de soma de entradas, retiradas e total de crédito. Essa rota deve retornar um objeto com o formato a seguir:
-
-```json
-{
-  "transactions": [
+  "distances": [
     {
-      "id": "uuid",
-      "title": "Salário",
-      "value": 4000,
-      "type": "income"
+      "destinyAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
+      "originAddress": "R. Uruguaiana, 22 - Centro, Rio de Janeiro - RJ, 20050-090, Brazil",
+      "currentDistance": 0.96
     },
     {
-      "id": "uuid",
-      "title": "Freela",
-      "value": 2000,
-      "type": "income"
+      "destinyAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
+      "originAddress": "R. Dezenove de Fevereiro, 34 - Botafogo, Rio de Janeiro - RJ, 22280-030, Brazil",
+      "currentDistance": 5.98
     },
     {
-      "id": "uuid",
-      "title": "Pagamento da fatura",
-      "value": 4000,
-      "type": "outcome"
-    },
-    {
-      "id": "uuid",
-      "title": "Cadeira Gamer",
-      "value": 1200,
-      "type": "outcome"
+      "destinyAddress": "R. Uruguaiana, 22 - Centro, Rio de Janeiro - RJ, 20050-090, Brazil",
+      "originAddress": "R. Dezenove de Fevereiro, 34 - Botafogo, Rio de Janeiro - RJ, 22280-030, Brazil",
+      "currentDistance": 5.07
     }
   ],
-  "balance": {
-    "income": 6000,
-    "outcome": 5200,
-    "total": 800
-  }
+  "maxDistanceAddress": [
+    {
+      "destinyAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
+      "originAddress": "R. Dezenove de Fevereiro, 34 - Botafogo, Rio de Janeiro - RJ, 22280-030, Brazil",
+      "currentDistance": 5.98
+    }
+  ],
+  "minDistanceAddress": [
+    {
+      "destinyAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
+      "originAddress": "R. Uruguaiana, 22 - Centro, Rio de Janeiro - RJ, 20050-090, Brazil",
+      "currentDistance": 0.96
+    }
+  ]
 }
 ```
 
@@ -149,59 +151,3 @@ Feito com ❤️ por Alquipo Neto 👋🏽 [Entre em contato!](https://www.linke
 [nodemon]: https://www.npmjs.com/package/nodemon
 [rs]: https://rocketseat.com.br
 [license]: https://opensource.org/licenses/MIT
-
-<!-- # Teste Calindra Backend
-Aplicação em nodeJS que consome a API Geocoding do Google e calcula a distância euclidiana entre dois pontos dados como endereços em linguagem natural.
-
-### Desafio
-A ideia do desafio é simples, entender como você pensa na hora de abordar os
-problemas. Nas linguagens e tecnologias que se sentir mais confortável.
-Criar uma API Rest que:
-1) Receba dois ou mais endereços (ex: Av. Rio Branco, 1 Centro, Rio de Janeiro RJ,
-20090003; Praça Mal. Âncora, 122 Centro, Rio de Janeiro RJ, 20021200; Rua 19 de
-Fevereiro, 34 Botafogo, Rio de Janeiro RJ, 22280030 ) como parâmetros de entrada
-2) Resolva a geolocalização entre os endereços utilizando a API do Google
-https://developers.google.com/maps/documentation/geocoding/start
-3) Após isso, com a latitude e longitude em mãos dos endereços, implementar o algoritmo de
-cálculo de distância Euclidiana e aplicar em todas as combinações de endereços.
-4) Retorne as distâncias calculadas entre os todos os endereços e indique os endereços
-mais próximos e também os endereços mais distantes.
-
-### Requisitos
-Para que possamos fazer requisições existe uma chave da API de Geocoding do Google que pode ser obtida por meio de uma conta teste, você pode obter a sua usando as seguintes instruções:
-
->   Para obter uma chave de API: Visite o [Google Cloud Platform Console](https://console.cloud.google.com/).
-    Clique no menu suspenso do projeto e selecione ou crie o projeto ao qual deseja adicionar uma chave de API.
-    Clique no botão de menu e selecione APIs e serviços> Credenciais.
-    Na página Credenciais, clique em Criar credenciais> Chave da API.
-    O diálogo de chave de API criada exibe sua chave de API recém-criada. Clique em Fechar.
-    A nova chave da API está listada na página Credenciais, em Chaves da API.
-
-
-- Node instalado
-- Npm instalado
-- Uma chave do Google Maps
-
-Coloque sua chave em um arquivo *.env* como o *._env.example_* contido nesse repositório.
-
-
-### Rodando localmente
-
-Clone o repositório e entre na pasta:
-
-    $ git clone git@github.com:ana-biscalchin/calindra-test-backend.git
-    $ cd calindra-test-backend/
-
-
-Instale as dependências:
-
-    $ pip3 install python-decouple googlemaps
-
-Execute o programa:
-
-    $ python3 app.py
-
-### Roadmap
-
- - Implementar o cálculo de distância euclidiana para mais de dois endereços;
- - Implementar a tecnologia Docker para executar a aplicação com mais facilidade. -->
