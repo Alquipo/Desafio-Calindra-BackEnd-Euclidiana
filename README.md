@@ -94,7 +94,7 @@ $ npm run dev:server
 
 - **`GET /coordinates/:address`**: Essa rota retorna os dados dos endereços inseridos e também a distancia mais proxima e a mais distantes
 
-> **`Exemplo da rota:`** http://localhost:3333/coordinates/Av. Rio branco 1 - Centro, Rio de Janeiro - RJ+Rua 19 de fevereiro, 34 - Botafogo, Rio de Janeiro - RJ+Rua Uruguaiana 22, Centro
+> **`Exemplo da rota:`** _http://localhost:3333/coordinates/Av. Rio branco 1 - Centro, Rio de Janeiro - RJ+Rua 19 de fevereiro, 34 - Botafogo, Rio de Janeiro - RJ+Rua Uruguaiana 22, Centro_
 
 ```json
 {
