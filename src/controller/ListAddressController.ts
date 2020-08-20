@@ -4,11 +4,7 @@ import { Request, Response } from 'express';
 import calculateDistance from '../utils/calculateDistance';
 
 export default class ListAddressService {
-  // eslint-disable-next-line class-methods-use-this
-  public async address(
-    request: Request,
-    response: Response,
-  ): Promise<Response> {
+  public async index(request: Request, response: Response): Promise<Response> {
     const {
       data: { results },
     } = await axios.get(

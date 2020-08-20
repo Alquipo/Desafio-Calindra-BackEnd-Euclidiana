@@ -1,2 +1,11 @@
-node_modules
+node_modules/
+temp/
+coverage/
+
+tmp/*
+!tmp/.gitkeep
+
+.vscode
+build/
+
 .env
