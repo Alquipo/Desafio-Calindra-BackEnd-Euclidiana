@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:server": "ts-node-dev --transpile-only  --ignore-watch node_modules src/server.ts",
-    "start": "tsc"
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "author": "Alquipo Neto",
   "license": "ISC",
