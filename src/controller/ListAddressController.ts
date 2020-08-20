@@ -26,6 +26,7 @@ export default class ListAddressService {
       },
     );
 
+    console.log(coordinates);
     const count = coordinates.length;
 
     const distances = [];
@@ -35,8 +36,17 @@ export default class ListAddressService {
           const { latitude: latitude1, longitude: longitude1 } = coordinates[i];
           const { latitude: latitude2, longitude: longitude2 } = coordinates[j];
 
-          const destinyAddress: string = coordinates[i].address;
+          const destinationAddress: string = coordinates[i].address;
           const originAddress: string = coordinates[j].address;
+
+          const {
+            latitude: destinationLatitude,
+            longitude: destinationLongitude,
+          } = coordinates[i];
+          const {
+            latitude: originLatitude,
+            longitude: originLongitude,
+          } = coordinates[j];
 
           const currentDistance: number = calculateDistance(
             latitude1,
@@ -45,7 +55,20 @@ export default class ListAddressService {
             longitude2,
           );
 
-          distances.push({ destinyAddress, originAddress, currentDistance });
+          distances.push({
+            Destination: {
+              destinationAddress,
+              destinationLatitude,
+              destinationLongitude,
+            },
+            Origen: {
+              originAddress,
+              originLatitude,
+              originLongitude,
+            },
+
+            currentDistance,
+          });
         }
       }
     }
