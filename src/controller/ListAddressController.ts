@@ -26,7 +26,6 @@ export default class ListAddressService {
       },
     );
 
-    console.log(coordinates);
     const count = coordinates.length;
 
     const distances = [];
@@ -56,12 +55,12 @@ export default class ListAddressService {
           );
 
           distances.push({
-            Destination: {
+            destination: {
               destinationAddress,
               destinationLatitude,
               destinationLongitude,
             },
-            Origen: {
+            origin: {
               originAddress,
               originLatitude,
               originLongitude,
