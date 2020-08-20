@@ -2,19 +2,16 @@
 
 <p align="center">
 
-<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Alquipo/Desafio-Calindra-BackEnd
-">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Alquipo/Desafio-Calindra-BackEnd">
 
-<img alt="Repository size" src="https://img.shields.io/github/repo-size/Alquipo/Desafio-Calindra-BackEnd
-">
+<img alt="Repository size" src="https://img.shields.io/github/repo-size/Alquipo/Desafio-Calindra-BackEnd">
 
 <a href="https://www.linkedin.com/in/alquiponeto/">
     <img alt="Made by Alquipo" src="https://img.shields.io/badge/made%20by-AlquipoNeto-blue">
 </a>
 
 <a href="https://github.com/Alquipo/Desafio-Calindra-BackEnd/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alquipo/Desafio-Calindra-BackEnd
-?color=blue">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alquipo/Desafio-Calindra-BackEnd?color=blue">
 </a>
 
 <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=blue">
