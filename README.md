@@ -48,17 +48,14 @@ Criar uma API Rest que:
 <p align="center">
 
   <img  alt="Test" title="Test" src=".github/test.png"  />
-  
- 
+
 </p>
 
 <div align="center">
 
-<button><a target="_blank" href="https://calindra-backend.herokuapp.com/coordinates/Av.%20Rio%20branco%201%20-%20Centro,%20Rio%20de%20Janeiro%20-%20RJ+Rua%2019%20de%20fevereiro,%2034%20-%20Botafogo,%20Rio%20de%20Janeiro%20-%20RJ+Rua%20Uruguaiana%2022,%20Centro"><img alt="Demo" src="https://www.herokucdn.com/deploy/button.png" ></img></a></button>
+<button><a target="_blank" href="https://bityli.com/jWgsF"><img alt="Demo" src="https://www.herokucdn.com/deploy/button.png" ></img></a></button>
 
 </div>
-
-
 
 ## 🔨 Tecnologias:
 
@@ -119,33 +116,73 @@ $ npm run dev:server
 {
   "distances": [
     {
-      "destinyAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
-      "originAddress": "R. Uruguaiana, 22 - Centro, Rio de Janeiro - RJ, 20050-090, Brazil",
+      "destination": {
+        "destinationAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
+        "destinationLatitude": -22.8973551,
+        "destinationLongitude": -43.1802782
+      },
+      "origin": {
+        "originAddress": "R. Uruguaiana, 22 - Centro, Rio de Janeiro - RJ, 20050-090, Brazil",
+        "originLatitude": -22.9058713,
+        "originLongitude": -43.178815
+      },
       "currentDistance": 0.96
     },
     {
-      "destinyAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
-      "originAddress": "R. Dezenove de Fevereiro, 34 - Botafogo, Rio de Janeiro - RJ, 22280-030, Brazil",
+      "destination": {
+        "destinationAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
+        "destinationLatitude": -22.8973551,
+        "destinationLongitude": -43.1802782
+      },
+      "origin": {
+        "originAddress": "R. Dezenove de Fevereiro, 34 - Botafogo, Rio de Janeiro - RJ, 22280-030, Brazil",
+        "originLatitude": -22.950709,
+        "originLongitude": -43.1876429
+      },
       "currentDistance": 5.98
     },
     {
-      "destinyAddress": "R. Uruguaiana, 22 - Centro, Rio de Janeiro - RJ, 20050-090, Brazil",
-      "originAddress": "R. Dezenove de Fevereiro, 34 - Botafogo, Rio de Janeiro - RJ, 22280-030, Brazil",
+      "destination": {
+        "destinationAddress": "R. Uruguaiana, 22 - Centro, Rio de Janeiro - RJ, 20050-090, Brazil",
+        "destinationLatitude": -22.9058713,
+        "destinationLongitude": -43.178815
+      },
+      "origin": {
+        "originAddress": "R. Dezenove de Fevereiro, 34 - Botafogo, Rio de Janeiro - RJ, 22280-030, Brazil",
+        "originLatitude": -22.950709,
+        "originLongitude": -43.1876429
+      },
       "currentDistance": 5.07
     }
   ],
   "maxDistanceAddress": [
     {
-      "destinyAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
-      "originAddress": "R. Dezenove de Fevereiro, 34 - Botafogo, Rio de Janeiro - RJ, 22280-030, Brazil",
-      "currentDistance": 5.98
+      "destination": {
+        "destinationAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
+        "destinationLatitude": -22.8973551,
+        "destinationLongitude": -43.1802782
+      },
+      "origin": {
+        "originAddress": "R. Dezenove de Fevereiro, 34 - Botafogo, Rio de Janeiro - RJ, 22280-030, Brazil",
+        "originLatitude": -22.950709,
+        "originLongitude": -43.1876429
+      },
+      "distance": 5.98
     }
   ],
   "minDistanceAddress": [
     {
-      "destinyAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
-      "originAddress": "R. Uruguaiana, 22 - Centro, Rio de Janeiro - RJ, 20050-090, Brazil",
-      "currentDistance": 0.96
+      "destination": {
+        "destinationAddress": "Av. Rio Branco, 1 - Centro, Rio de Janeiro - RJ, 20090-003, Brazil",
+        "destinationLatitude": -22.8973551,
+        "destinationLongitude": -43.1802782
+      },
+      "origin": {
+        "originAddress": "R. Uruguaiana, 22 - Centro, Rio de Janeiro - RJ, 20050-090, Brazil",
+        "originLatitude": -22.9058713,
+        "originLongitude": -43.178815
+      },
+      "distance": 0.96
     }
   ]
 }
